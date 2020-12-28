@@ -4,6 +4,10 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
+  mode: 'production',
+  devServer: {
+    contentBase: './dist',
+  },
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
